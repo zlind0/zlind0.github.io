@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="notosc/noto_serif_sc_bold/css.css" rel="stylesheet">
+    <link href="notosc/noto_serif_sc_regular/css.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'"> -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+
+    <title>Lind的小屋</title>
+    <style>
+        .sans {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        a,.foot,.footlink {
+            color: rgb(192, 174, 156);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 10pt;
+            font-family: "Noto Serif SC", "Didot", 'Times New Roman', Times, serif;
+            background-color: rgb(249, 243, 233);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-align: center;
+        }
+
+        .nav {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(192, 174, 156);
+        }
+
+        #btn_back {
+            float: left;
+        }
+
+        #titlespan {
+            float: right;
+        }
+
+        .content {
+            font-size: 12pt;
+            max-width: 600pt;
+            margin: auto;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1em;
+            margin-bottom: 0.3em;
+            /* width: 80%; */
+            height: auto;
+            max-height: 80vh;
+            max-width: 90%;
+            box-shadow: 0 0pt 1em rgba(0, 0, 0, 0.2);
+            border-radius: 10pt;
+        }
+        .img_iosshadow{
+            position: absolute;
+            z-index: 2;
+            object-fit: contain;
+            width: 100px;
+            height: 100px;
+        }
+
+        p {
+            text-indent: 2em;
+            margin-block-start: 0.2em;
+            margin-block-end: 0.2em;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+
+        hr {
+            height: 1px;
+            border: none;
+            color: #333;
+            background-color: rgb(192, 174, 156);
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+        li {
+            list-style-type: none;
+            color: #5d4d3c;
+        }
+        .img_desc{
+            text-align: center;
+            color: rgb(192, 174, 156);
+            font-size: small;
+            text-indent: 0em;
+            padding-bottom: 0.5em;
+        }
+
+        .friendimg{
+            max-width: 80px;
+            box-shadow: 0 0pt 1em rgba(0, 0, 0, 0.1);
+            
+        }
+        .friendlink {
+            /* margin-left: auto;
+            margin-right: auto; */
+            min-width: 80px;
+            padding: 10px;
+        }
+
+        .friendlinks{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+        .li_date{
+            font-size: small;
+            color: rgb(192, 174, 156);
+            /* float: right; */
+        }
+        code,.mono{
+            font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
+        }
+        .mahler {
+            width: 200px;
+            opacity: 0.1;
+            position: absolute;
+            right: 0;
+            top: 0;
+            box-shadow: 0 0 0;
+            
+        }
+
+        input, select, textarea, button{font-family:inherit;}
+        input {
+            background-color: transparent;
+            border:1px solid rgb(192, 174, 156);
+            border-radius: 8px;
+            font-size: 14px;
+            padding:8px;
+            margin-right: 8px;
+        }
+        .inputdiv{
+            display: table;
+            width: 100%;
+        }
+        .inputdiv>button{
+            float: right;
+            /* width: 80px; */
+            padding:8px;
+            font-size: 14px;
+            background: none;
+            box-shadow: none;
+            border-radius: 8px;
+            background-color: rgb(192, 174, 156);
+            color:rgb(249, 243, 233);
+            border: 0; 
+
+        }
+        .chatmsg{
+            padding-bottom: 0.5em;
+        }
+        #inputname {
+            float:left;
+            width: 5em;
+            font-weight: bold;
+            text-align: center;
+        }
+        #inputmsg{
+            float:none;
+            display: table-cell;
+            width: 100%;
+            /* width: calc(100% - 32px - 9.5em); */
+            /* width: calc(100%-32px-7em); */
+        }
+        .sender{
+            float:left
+        }
+        .chatmsg>*{
+            margin: 0;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <span id="back_btn">&lt; 返回</span>
+        <span id="titlespan">Lind的小屋</span>
+    </div>
+    
+    <!-- <div class="content">
+        <img class="mahlerbg" src="images/mahler.png"/>
+    </div> -->
+    <div class="content" id="mdcontent"></div>
+    <div class="content" >
+        <div class="inputdiv">
+            <hr>
+            <input class="serif" id="inputname" placeholder="昵称"/>
+            <button id="msgsend" > 发送 </button>
+            <div style="display: flex;"><input class="serif" id="inputmsg" placeholder="评论，支持Markdown"/></div>
+        </div> 
+        <div id="chatroom">
+            <!-- <div class="chatmsg">
+                <div class="li_date mono">2020-00-00 00:00:00</div>
+                <b>某人:</b>我说了一句话。
+            </div> -->
+        </div>
+        <a style="text-align: center; display: block;" onclick="fetchMoreChat()">显示更多</a>
+        
+    </div>
+    <div class="content" id="footlinks">
+        <!-- <img class="mahler" src="images/mahler.png"/> -->
+    </div>
+    
+    <div class="content">
+        <hr>
+        <a href="https://github.com/zlind0" class="fa fa-github">         <span class="footlink sans">&nbsp;zlind0    </span></a><br>
+        <a href="https://gustavmahler.com/" class="fa fa-music">          <span class="footlink sans">&nbsp;Know more about Gustav Mahler</span></a><br>
+        
+    </div>
+    <div class="content foot sans" style="text-align: center; font-size: small; padding-top: 2em;">
+        Copyright &copy; 2021 Lind<br>
+        Designed and Implemented by Lind<br>
+    </div>
+</body>
+<script src="showdown.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="jquery.cookie.min.js"></script>
+
+<script>
+    var test="HOLA";
+    function showAlt(){$(this).replaceWith(this.alt)};
+    function addShowAlt(selector){
+        $.each($(selector), function(){
+            console.log($(this));
+            if($(this).attr("alt") && $(this).attr("alt").length>0){
+                $(this).after('<div class="img_desc">'+$(this).attr("alt")+'</div>');
+                $(this).removeAttr("alt");
+            }
+        });
+
+        // $(selector).after($(selector).attr("alt"));
+    };
+    function addIosShadow(selector){
+        $.each($(selector), function(){
+            $(this).before('<img class="img_iosshadow" src="ios2.svg"/>');
+        });
+    }
+
+    
+
+    
+    function formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        var datestring=d.toISOString().split('T').join(" ").split(".")[0];
+
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+        console.log(datestring);
+        return datestring;
+    }
+
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function getChatHtml (author, content, time){
+        datestring=formatDate(time);
+        var converter = new showdown.Converter();
+        var html = converter.makeHtml(escapeHtml(content));
+        var chatboxhtml=`
+        <div class="chatmsg">
+                <div class="li_date mono">`+datestring+`</div>
+                <b class="sender">`+author+`:</b>`+html+`
+        </div>`;
+        return chatboxhtml;
+    }
+
+    var batchnum=0;
+    var index_roomname="pub_index";
+    var roomname=index_roomname;
+    var firstfetch=true;
+    function clearChat(){
+        batchnum=0;
+        firstfetch=true;
+        $("#chatroom").html("");
+    }
+    function fetchMoreChat(){
+        if(batchnum==0){clearChat();}
+        console.log("fetchMoreChat",roomname);
+        $.ajax({
+            method:"POST",
+            url:"api/msg",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify({
+                "action": "get",
+                "room": roomname,
+                "batchnum": batchnum
+            }),
+            success: function(data){
+                console.log(data);
+                var keys = Object.keys(data["data"]);
+                keys.reverse();
+                $.each(keys, (i, idx)=>{
+                    val=data["data"][idx];
+                    console.log(idx, val);
+                    var utcSeconds = idx;
+                    var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+                    // console.log(Date.now());
+                    d.setMilliseconds(utcSeconds- 60000 * d.getTimezoneOffset());
+                    $("#chatroom").append(getChatHtml(val[0], val[1], d));
+                });
+                batchnum+=1;
+                if (firstfetch && keys.length<10){
+                    fetchMoreChat();
+                }
+                return keys.length;
+            }
+        });
+    }
+    
+    function postChat(roomname, author, content){
+        console.log("postChat", roomname, author, content);
+        $.ajax({
+            method:"POST",
+            url:"api/msg",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify({
+                "action": "put",
+                "room": roomname,
+                "author": author,
+                "content": content,
+                "time":Date.now()
+            }),
+            success: function(data){
+                console.log(data);
+                var d=new Date(0);
+                $("#chatroom").prepend(getChatHtml(author, content, Date.now()- 60000 * d.getTimezoneOffset()));
+                $("#inputmsg").val("");
+            }
+        });
+    }
+    console.log(document.cookie);
+    $("#msgsend").click(function(){
+        var author=$("#inputname").val();
+        if (author.length==0){
+            author="某人";
+            
+        }
+        $.cookie('author', author, { expires: 7 });
+        var msg=$("#inputmsg").val();
+        if (msg.length>0){
+            postChat(roomname,author,msg);
+        }
+        $("#inputname").val($.cookie("author"));
+        console.log(document.cookie);
+    });
+    $("#inputname").val($.cookie("author"));
+
+    function loadMd(filename, backbtn = false) {
+        console.log("LOADMD", filename, backbtn);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // console.log(this.responseText);
+                var converter = new showdown.Converter();
+                var html = converter.makeHtml(this.responseText);
+                console.log(html);
+                document.getElementById("mdcontent").innerHTML = html;
+                
+                if (backbtn == false) { // browse content
+                    $(".nav").css("color", "rgb(249,243,233)")
+                    $("li>code").addClass("li_date")
+                    roomname=index_roomname;
+                    clearChat();
+                    fetchMoreChat();
+                    $("li").click(function () { // caption click
+                        var title = $(this).text();
+                        console.log(title);
+                        loadMd("posts/" + title + ".md", true);
+                        roomname=title;
+                        clearChat();
+                        if (window.history && window.history.pushState) {
+                            window.history.pushState('forward', null, './?md='+title);
+                        }
+                    });
+                    $("#footlinks").html(footlinks_html);
+                }
+                else { //jump to an article
+                    
+                    fetchMoreChat();
+                    $(".nav").css("color", "rgb(192,174,156)");
+                    $("#footlinks").html("");
+                }
+            }
+            addShowAlt("img");
+            // addIosShadow("img");
+        };
+        xhttp.open("GET", filename, true);
+        xhttp.send();
+    }
+    var footlinks_html = $("#footlinks").html();
+    window.onhashchange = function () {
+        console.log("back");
+    }
+    loadMd("postlist.md", false);
+    $("#back_btn").click(function () {
+        // loadMd("postlist.md", false);
+        // window.history.popState();
+        window.history.back();
+    });
+    $(window).on('popstate', function () { loadMd("postlist.md", false); });
+</script>
+</html>
